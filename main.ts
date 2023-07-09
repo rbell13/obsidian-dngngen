@@ -2,7 +2,7 @@ import { Plugin, Editor } from 'obsidian';
 import { EditorView, } from '@codemirror/view'
 
 export default class DngngenPlugin extends Plugin {
-    pasteHandler = (evt: ClipboardEvent, editor: Editor) => UrlIntoSelection(editor, evt);
+    pasteHandler = (evt: ClipboardEvent, editor: Editor) => replaceDNGNGENTextIfPresentInClipboard(editor, evt);
 
     async onload() {
         this.app.workspace.on("editor-paste", this.pasteHandler);
@@ -10,14 +10,8 @@ export default class DngngenPlugin extends Plugin {
     }
 }
 
-
-
-/**
- * @param editor Obsidian Editor Instance
- * @param cbEvent clipboard event
- * @param settings plugin settings
- */
-export function UrlIntoSelection(editor: Editor, cb:  ClipboardEvent): void {
+// main pasteHandle function for replacing codeblock text to make Obsidian parse the codeblock language correctly
+export function replaceDNGNGENTextIfPresentInClipboard(editor: Editor, cb:  ClipboardEvent): void {
     if ( cb.clipboardData === null) {
         console.error("empty clipboardData in ClipboardEvent");
         return;
@@ -32,19 +26,17 @@ export function UrlIntoSelection(editor: Editor, cb:  ClipboardEvent): void {
     }
 }
 
-function getCbText(cb: string | ClipboardEvent): string | null {
+// Helper function to get clipboard text from a clipboard event
+function getCbText(cb:ClipboardEvent): string | null {
     let clipboardText: string;
-  
-    if (typeof cb === "string") {
-      clipboardText = cb;
-    } else {
-      if (cb.clipboardData === null) {
+
+    if (cb.clipboardData === null) {
         console.error("empty clipboardData in ClipboardEvent");
-        return null;
-      } else {
+    return null;
+    } else {
         clipboardText = cb.clipboardData.getData("text");
-      }
     }
+
     return clipboardText.trim();
 }
 
