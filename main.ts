@@ -22,35 +22,47 @@ export default class DngngenPlugin extends Plugin {
         
         if (remainingText) {
             const headers = [
-                "What brings you here?",
-                "Status",
-                "Imminent danger",
-                "Who or what dwells here now?",
-                "Entrance",
-                "Guarded by",
-                "Distinctive feature",
-                "Room 1",
-                "Room 2",
-                "Room 3",
-                "Room 4"
+                [
+                    "What brings you here?",
+                    "Status",
+                    "Imminent danger"
+                ],
+                [
+                    "Who or what dwells here now?"
+                ],
+                [
+                    "Entrance",
+                    "Guarded by",
+                    "Distinctive feature"
+                ],
+                [
+                    "Room 1",
+                    "Room 2",
+                    "Room 3",
+                    "Room 4"
+                ]
             ];
-            const table = el.createEl("table");
+            const table = el.createEl("table", );
             const body = table.createEl("tbody");
 
-            headers.forEach((header) => {
-                const escapedHeader = header.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-                const regex = new RegExp(`${escapedHeader}\\s*(.+?)(?:\\. |$)`);
-                const match = text.match(regex);
-
+            headers.forEach((headerRow) => {
                 const row = body.createEl("tr");
-                if (match) {
-                  row.createEl("td", {text: header});
-                  row.createEl("td", {text: match[1].trim() + "."});
-                }else {
-                    const row = body.createEl("tr");
-                    row.createEl("td", { text: header });
-                    row.createEl("td", { text: "" }); // Add an empty cell if no match is found
-                  }
+                headerRow.forEach((header) =>{
+                    const col = row.createEl("th")
+                    col.colSpan = 12/headerRow.length
+
+                    const escapedHeader = header.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\n/g, " ");;
+                    const regex = new RegExp(`${escapedHeader}\\s*(.+?)(?:\\. |$)`);
+                    const match = text.match(regex);
+
+                    const headerType = "h"+(headerRow.length+2);
+                    col.createEl(<keyof HTMLElementTagNameMap>headerType , {text: header});
+                    if (match) {
+                        col.createEl("p", {text: match[1].trim() + "."});
+                    }else {
+                        col.createEl("p", { text: "" }); // Add an empty cell if no match is found
+                    }
+                });
               });
         }
         el.createEl("sub", {text: attribution})
