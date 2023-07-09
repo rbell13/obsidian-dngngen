@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-sample-plugin",
+	"name": "obsidian-dngngen",
 	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"description": "This plugin renders markdown from the dungeon generator DNGNGEN (https://dngngen.makedatanotlore.dev/) for the OSR TTRPG MÖRK BORG.",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
