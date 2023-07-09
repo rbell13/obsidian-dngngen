@@ -6,6 +6,5 @@
 	"description": "This plugin renders markdown from the dungeon generator DNGNGEN (https://dngngen.makedatanotlore.dev/) for the OSR TTRPG MÖRK BORG.",
 	"author": "rbell13",
 	"authorUrl": "https://github.com/rbell13",
-	"fundingUrl": "",
 	"isDesktopOnly": false
 }
