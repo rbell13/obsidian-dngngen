@@ -1,24 +1,30 @@
 {
 	"name": "dngngen",
-	"version": "1.0.1",
-	"description": "This plugin renders markdown from the dungeon generator DNGNGEN (https://dngngen.makedatanotlore.dev/) for the OSR TTRPG MÖRK BORG.",
+	"version": "1.1.0",
+	"description": "Render dungeons copied from DNGNGEN as structured notes for Mork Borg.",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
 		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
-		"version": "node version-bump.mjs && git add manifest.json versions.json"
+		"version": "node version-bump.mjs && git add manifest.json versions.json",
+		"lint": "eslint .",
+		"test": "node --import tsx --test tests/*.test.ts",
+		"check": "npm run lint && npm test && npm run build"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "MIT",
 	"devDependencies": {
-		"@types/node": "^16.11.6",
-		"@typescript-eslint/eslint-plugin": "5.29.0",
-		"@typescript-eslint/parser": "5.29.0",
-		"builtin-modules": "3.3.0",
-		"esbuild": "0.17.3",
-		"obsidian": "latest",
-		"tslib": "2.4.0",
-		"typescript": "4.7.4"
-	}
+		"@eslint/js": "^9.39.4",
+		"@types/node": "^22.15.17",
+		"esbuild": "^0.25.5",
+		"eslint": "^9.39.4",
+		"eslint-plugin-obsidianmd": "^0.4.2",
+		"jiti": "^2.6.1",
+		"obsidian": "^1.13.1",
+		"tsx": "^4.23.13",
+		"typescript": "^5.9.3",
+		"typescript-eslint": "^8.70.0"
+	},
+	"type": "module"
 }

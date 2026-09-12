@@ -1,9 +1,9 @@
 {
 	"id": "dngngen",
-	"name": "MÖRK BORG DNGNGEN",
-	"version": "1.0.1",
-	"minAppVersion": "0.15.0",
-	"description": "This plugin renders markdown from the dungeon generator DNGNGEN (https://dngngen.makedatanotlore.dev/) for the OSR TTRPG MÖRK BORG.",
+	"name": "DNGNGEN Renderer",
+	"version": "1.1.0",
+	"minAppVersion": "1.0.0",
+	"description": "Render dungeons copied from DNGNGEN as structured notes for Mork Borg.",
 	"author": "rbell13",
 	"authorUrl": "https://github.com/rbell13",
 	"isDesktopOnly": false
