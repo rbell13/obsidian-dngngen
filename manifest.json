@@ -1,7 +1,7 @@
 {
 	"id": "dngngen",
 	"name": "DNGNGEN Renderer",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"minAppVersion": "1.0.0",
 	"description": "Render dungeons copied from DNGNGEN as structured notes for Mork Borg.",
 	"author": "rbell13",

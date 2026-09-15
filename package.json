@@ -1,6 +1,6 @@
 {
 	"name": "dngngen",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "Render dungeons copied from DNGNGEN as structured notes for Mork Borg.",
 	"main": "main.js",
 	"scripts": {
