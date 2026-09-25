@@ -1,7 +1,7 @@
 {
 	"name": "dngngen",
 	"version": "1.1.1",
-	"description": "Render dungeons copied from DNGNGEN as structured notes for Mork Borg.",
+	"description": "Render DNGNGEN dungeons as structured notes for the Mork Borg tabletop role-playing game (TTRPG).",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
@@ -11,8 +11,14 @@
 		"test": "node --import tsx --test tests/*.test.ts",
 		"check": "npm run lint && npm test && npm run build"
 	},
-	"keywords": [],
-	"author": "",
+	"keywords": [
+		"obsidian",
+		"obsidian-plugin",
+		"ttrpg",
+		"mork-borg",
+		"dungeon-generator"
+	],
+	"author": "rbell13",
 	"license": "MIT",
 	"devDependencies": {
 		"@eslint/js": "^9.39.4",

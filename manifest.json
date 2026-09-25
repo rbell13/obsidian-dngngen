@@ -3,7 +3,7 @@
 	"name": "DNGNGEN Renderer",
 	"version": "1.1.1",
 	"minAppVersion": "1.0.0",
-	"description": "Render dungeons copied from DNGNGEN as structured notes for Mork Borg.",
+	"description": "Render DNGNGEN dungeons as structured notes for Mork Borg. Support development at ko-fi.com/roland14.",
 	"author": "rbell13",
 	"authorUrl": "https://github.com/rbell13",
 	"isDesktopOnly": false
