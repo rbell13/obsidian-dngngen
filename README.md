@@ -64,3 +64,7 @@ DNGNGEN was created by Karl Druid. MÖRK BORG is © 2020 Ockult Örtmästare Gam
 ## License
 
 [MIT](LICENSE)
+
+## Support
+
+[KoFi](ko-fi.com/roland14)
