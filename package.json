@@ -1,6 +1,6 @@
 {
 	"name": "dngngen",
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"description": "Render DNGNGEN dungeons as structured notes for the Mork Borg tabletop role-playing game (TTRPG).",
 	"main": "main.js",
 	"scripts": {
