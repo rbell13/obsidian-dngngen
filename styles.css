@@ -1,0 +1,27 @@
+.dngngen table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.dngngen td {
+	border: 1px solid var(--background-modifier-border);
+	padding: var(--size-4-2) var(--size-4-3);
+	vertical-align: top;
+}
+
+.dngngen td h3,
+.dngngen td h4,
+.dngngen td h5,
+.dngngen td h6 {
+	margin-top: 0;
+}
+
+.dngngen-attribution {
+	display: block;
+	margin-top: var(--size-4-2);
+	color: var(--text-muted);
+}
+
+.dngngen-error {
+	color: var(--text-error);
+}

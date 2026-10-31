@@ -51,6 +51,7 @@ jobs:
           subject-path: |
             main.js
             manifest.json
+            styles.css
 
       - name: Create GitHub release
         env:
@@ -59,4 +60,4 @@ jobs:
           gh release create "$GITHUB_REF_NAME" \
             --title="DNGNGEN Renderer $GITHUB_REF_NAME" \
             --generate-notes \
-            main.js manifest.json
+            main.js manifest.json styles.css

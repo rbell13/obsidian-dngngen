@@ -31,7 +31,7 @@ After the plugin is accepted into the Obsidian Community directory:
 
 ### Manual installation
 
-Download `main.js` and `manifest.json` from the latest GitHub release. Place them in:
+Download `main.js`, `manifest.json`, and `styles.css` from the latest GitHub release. Place them in:
 
 ```text
 <Vault>/.obsidian/plugins/dngngen/
