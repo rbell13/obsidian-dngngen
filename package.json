@@ -1,6 +1,6 @@
 {
 	"name": "dngngen",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"description": "Render DNGNGEN dungeons as structured notes for the Mork Borg tabletop role-playing game (TTRPG).",
 	"main": "main.js",
 	"scripts": {
@@ -21,10 +21,10 @@
 	"author": "rbell13",
 	"license": "MIT",
 	"devDependencies": {
-		"@eslint/js": "^9.39.4",
-		"@types/node": "^22.15.17",
+		"@eslint/js": "^9.39.5",
+		"@types/node": "^26.6.6",
 		"esbuild": "^0.28.2",
-		"eslint": "^9.39.4",
+		"eslint": "^9.39.5",
 		"eslint-plugin-obsidianmd": "^0.5.1",
 		"jiti": "^2.6.1",
 		"obsidian": "^1.13.1",
